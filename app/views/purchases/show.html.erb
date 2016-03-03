@@ -1,0 +1,155 @@
+<p id="notice"><%= notice %></p>
+<div class="">
+  <!-- Left hand column -->
+  <div class="col-xs-12 col-md-8">
+    <div>
+      <ol class="breadcrumb">
+        <li><a href="#">Product Category</a></li>
+        <li><a href="#">Home Appliances</a></li>
+        <li class="active">Clothes Washing Machine</li>
+      </ol>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        Product
+      </div>
+      <div class="panel-body">
+      <p>
+        <strong>Product:</strong>
+        <%= @purchase.product %>
+      </p>
+        <p>
+          <strong>Model No:</strong>
+        </p>
+        <p>
+          <strong>Serial No:</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        Product Receipt
+      </div>
+      <div class="panel-body">
+        <p>
+          <strong>Purchase date:</strong>
+          <%= @purchase.purchase_date %>
+        </p>
+        <p>
+          <strong>Warranty term:</strong>
+         </p>
+         <p>
+            <strong>Warranty expiration:</strong>
+            <%= @purchase.warranty_expiration %>
+          </p>
+          <p>
+            <strong>Receipt image:</strong>
+            <%= @purchase.receipt_image %>
+          </p>
+      </div>
+    </div>
+
+
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        Product Seller
+      </div>
+      <div class="panel-body">
+        <p>
+          <strong>Company name:</strong>
+        </p>
+        <p>
+          <strong>Address:</strong>
+        </p>
+        <p>
+          <strong>Phone:</strong>
+        </p>
+        <p>
+          <strong>Email</strong>
+        </p>
+      </div>
+    </div>
+
+
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        Product Manufacturer Customer Support
+      </div>
+      <div class="panel-body">
+        <p>
+          <strong>Company name:</strong>
+        </p>
+        <p>
+          <strong>Phone:</strong>
+        </p>
+        <p>
+          <strong>Email:</strong>
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-danger"> 
+      <div class="panel-heading">Community: Other product users</div>
+        <div class="panel-body">
+          <p>Connect with other product users </p>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right hand column -->
+  <div class="col-xs-12 col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>Product brand logo</p>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>Manufacturer product photo</p>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>My product photos</p>
+      </div>
+    </div>
+
+
+     <!-- ## link button to product resource library -->  
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>Product user guides</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+  <strong>User:</strong>
+  <%= @purchase.user %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
+<%= link_to 'Back', purchases_path %>

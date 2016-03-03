@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  purchase_date: 2016-02-25
+  warranty_expiration: 2016-02-25
+  receipt_image: MyString
+  user_id: 
+  product_id: 
+
+two:
+  purchase_date: 2016-02-25
+  warranty_expiration: 2016-02-25
+  receipt_image: MyString
+  user_id: 
+  product_id: 

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  model_no: MyString
+  serial_no: MyString
+  user_manual: MyString
+  manufacturer_id: 
+
+two:
+  name: MyString
+  description: MyString
+  model_no: MyString
+  serial_no: MyString
+  user_manual: MyString
+  manufacturer_id: 

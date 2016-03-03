@@ -11,7 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218092538) do
+ActiveRecord::Schema.define(version: 20160225093634) do
+
+  create_table "manufacturers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone_number"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "model_no"
+    t.string   "serial_no"
+    t.string   "user_manual"
+    t.integer  "manufacturer_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "products", ["manufacturer_id"], name: "index_products_on_manufacturer_id"
+
+  create_table "purchases", force: :cascade do |t|
+    t.date     "purchase_date"
+    t.date     "warranty_expiration"
+    t.string   "receipt_image"
+    t.integer  "user_id"
+    t.integer  "product_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "purchases", ["product_id"], name: "index_purchases_on_product_id"
+  add_index "purchases", ["user_id"], name: "index_purchases_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
